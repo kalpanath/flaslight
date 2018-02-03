@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="qlikapps.flashlight" >
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="true"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/swipelighticon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--Home Screen Widget-->
+        <receiver android:name=".HomeScreenWidgetProvider" android:label="Flashlight">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@layout/homescreen_widget_manifest" />
+        </receiver>
+
+        <receiver android:name="FlashlightWidgetReceiver">
+            <intent-filter>
+                <action android:name="COM_FLASHLIGHT"></action>
+            </intent-filter>
+        </receiver>
+
+        <!--Lock Screen Widget-->
+        <receiver android:name=".LockScreenWidgetProvider" android:label="Flashlight">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@layout/lockscreen_widget_manifest" />
+        </receiver>
+
+        <receiver android:name="LockFlashlightWidgetReceiver">
+            <intent-filter>
+                <action android:name="COM_FLASHLIGHT"></action>
+            </intent-filter>
+        </receiver>
+
+        <!--Dash Clock Extension-->
+        <service android:name=".SwipelightDashClock"
+            android:icon="@drawable/swipelightinverted"
+            android:label="Swipelight"
+            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+            <meta-data android:name="protocolVersion" android:value="2" />
+            <meta-data android:name="worldReadable" android:value="true" />
+            <meta-data android:name="description"
+                android:value="Flashlight" />
+            <!-- A settings activity is optional -->
+            <meta-data android:name="settingsActivity"
+                android:value=".ExampleSettingsActivity" />
+        </service>
+
+        <!--Main UI-->
+        <activity
+            android:name=".CameraActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+        android:name=".Main"
+        android:label="@string/app_name" >
+    </activity>
+
+    </application>
+
+</manifest>

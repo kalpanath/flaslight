@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fadingEdge="none">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="16dp"
+        android:id="@+id/totalSettingsLayout"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:id="@+id/multitaskingLayout">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/multitaskingButton"
+                android:src="@drawable/round_multitask_off"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Multitasking"
+                android:id="@+id/textView2"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:id="@+id/textTipsSettingLayout"
+            android:layout_marginTop="16dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textTipsButton"
+                android:src="@drawable/round_texttips_off"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Swipe Directions"
+                android:id="@+id/textView4"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:id="@+id/autoFlashLayout"
+            android:layout_marginTop="16dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/autoFlashButton"
+                android:src="@drawable/round_autoflash_off"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Flashlight On Start"
+                android:id="@+id/textView1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:id="@+id/volumeButtonsLayout"
+            android:layout_marginTop="16dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/volumeToggleButton"
+                android:src="@drawable/round_volume_off"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Volume Button Toggle"
+                android:id="@+id/textView3"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
